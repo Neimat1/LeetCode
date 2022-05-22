@@ -21,10 +21,10 @@ int getDecimalValue(ListNode* head) {
         node = node->next;
         counterSize++;
     }
-    ListNode * curr = head;
-    while(curr != nullptr){
-        result+=(pow(2,counterSize)*curr->val);
-        curr = curr->next;
+    node = head;
+    while(node != nullptr){
+        result+=(pow(2,counterSize)*node->val);
+        node = node->next;
         counterSize--;
     }
     return result;
