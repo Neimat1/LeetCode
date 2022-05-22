@@ -17,12 +17,12 @@ int getDecimalValue(ListNode* head) {
     int counterSize = -1;
     int result=0;
     ///2- calculate size of list 
-    while(node){
+    while(node!=nullptr){
         node = node->next;
         counterSize++;
     }
     ListNode * curr = head;
-    while(curr){
+    while(curr != nullptr){
         result+=(pow(2,counterSize)*curr->val);
         curr = curr->next;
         counterSize--;
