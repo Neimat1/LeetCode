@@ -16,7 +16,7 @@ public:
     ListNode*node = head;
     ///1- if the list is empty
     if(node == nullptr)
-        return nullptr;
+        return head;
     while(node->next != nullptr){
         if(node->next->val == val){
             node->next = node->next->next;
