@@ -10,13 +10,12 @@
  */
 class Solution {
 public:
-    ListNode* removeElements(ListNode* head, int val) {
+ ListNode* removeElements(ListNode* head, int val) {
 
     ///the first create and initialize new pointer as a reference to the head;
     ListNode*node = head;
-    ///1- if the list is empty OR
-    /// the list have only one element and the element will removed
-    if((node == nullptr) || (node->val == val && node->next == nullptr))
+    ///1- if the list is empty
+    if(node == nullptr)
         return nullptr;
     while(node->next != nullptr){
         if(node->next->val == val){
